@@ -1,0 +1,25 @@
+{
+    "database": "RegistrApp.db",
+    "version": 1,
+    "encrypted": false,
+    "mode": "full",
+    "tables": [
+        {
+            "name": "Usuario_alumno",
+            "schema": [
+                {
+                    "column": "ua_nom",
+                    "value": "TEXT NOT NULL PRIMARY KEY"
+                },
+                {
+                    "column": "ua_cor",
+                    "value": "TEXT"
+                },
+                {
+                    "column": "ua_con",
+                    "value": "TEXT"
+                }
+            ]
+        }
+    ]
+}

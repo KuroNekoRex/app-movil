@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>RegistrApp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/login']" expand="block" color="dark">Volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Cambiar Contraseña</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="full">
+        <ion-label position="floating">Usuario</ion-label>
+        <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+      </ion-item>
+      <ion-item lines="full">
+        <ion-label position="floating">Nueva Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.nuevacontra"></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+          <ion-button color="dark" expand="full" (click)="update()">Actualizar Contraseña</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

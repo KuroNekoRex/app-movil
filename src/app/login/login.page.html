@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-title>RegistrApp</ion-title>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/home']" expand="block" color="dark">volver</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Ingreso de Usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-item lines="full">
+          <ion-label position="floating">Usuario</ion-label>
+          <ion-input type="text" [(ngModel)]="user.usuario"></ion-input>
+        </ion-item>
+        <ion-item lines="full">
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col>
+            <ion-button color="dark" expand="full" (click)="ingresar()">Ingresar</ion-button>
+            <ion-label position="floating">Olvidaste tu contraseña?</ion-label>
+            <ion-button color="dark" expand="full" [routerLink]="['/recover']">Recuperar</ion-button>
+          </ion-col>
+        </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
